@@ -11,7 +11,11 @@ A friendly TypeScript starter for Node.js ESM projects, with testing, linting, a
 
 ## 📋 Requirements
 
-- Node.js 18+
+- Node.js 24.15+ or 26+ (Vitest 5 doesn't support Node 25)
+
+## 🧩 TypeScript 7
+
+`tsc` is TypeScript 7 (the `@typescript/native` package). XO lints through typescript-eslint, which needs the TypeScript 6 API that 7.0 doesn't ship, so `typescript` is aliased to `@typescript/typescript6`, following [Microsoft's side-by-side setup](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0). Drop the alias once typescript-eslint supports TypeScript 7.
 
 ## 🛠️ Setup
 
